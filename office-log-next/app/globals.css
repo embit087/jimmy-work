@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  /* Stable layout on mobile; prevent text inflation on orientation change. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #000000;
+  color: #ededed;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, "PingFang TC", "Microsoft JhengHei",
+    "Noto Sans TC", "Hiragino Sans", sans-serif;
+}
+
+/* Keep the native time picker compact + legible on the white card. */
+input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
