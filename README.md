@@ -32,6 +32,22 @@ npm test         # vitest
 npm run deploy   # wrangler deploy
 ```
 
+## Integrity
+
+SHA-256 checksums of all tracked files are recorded in [`CHECKSUMS.sha256`](./CHECKSUMS.sha256).
+
+Verify with:
+
+```bash
+shasum -a 256 -c CHECKSUMS.sha256
+```
+
+Regenerate after changing files:
+
+```bash
+git ls-files | sort | xargs shasum -a 256 > CHECKSUMS.sha256
+```
+
 ## Repository
 
 - Remote: https://github.com/embit087/jimmy-work
