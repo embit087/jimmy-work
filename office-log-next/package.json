@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/checksum.mjs generate",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "checksum": "node scripts/checksum.mjs generate",
+    "checksum:verify": "node scripts/checksum.mjs verify"
   },
   "dependencies": {
     "next": "16.2.9",
